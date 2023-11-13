@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using W_Project.Pages;
-using W_Project.Pages.Services;
+using W_Project.Services;
 
 namespace W_Project
 {
@@ -28,6 +28,8 @@ namespace W_Project
             builder.Services.AddTransient<LoadingPage>();
             builder.Services.AddTransient<ListingPage>();
             builder.Services.AddTransient<Contents>();
+            //builder.Services.AddTransient<LoginPage>();
+
 
 
             return builder.Build();
