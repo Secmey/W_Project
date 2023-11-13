@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W_Project", "W_Project\W_Project.csproj", "{53A81BDC-AC9A-4F33-9CA6-41F26CAB238F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "W_Project", "W_Project\W_Project.csproj", "{53A81BDC-AC9A-4F33-9CA6-41F26CAB238F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Projektmappenelemente", "{DCA00888-3FF7-4A6E-BEDE-A4177CFF06AC}"
+	ProjectSection(SolutionItems) = preProject
+		MauiHelpContent.txt = MauiHelpContent.txt
+		README.txt = README.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

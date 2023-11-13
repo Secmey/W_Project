@@ -28,6 +28,7 @@ namespace W_Project
             builder.Services.AddTransient<LoadingPage>();
             builder.Services.AddTransient<ListingPage>();
             builder.Services.AddTransient<Contents>();
+            builder.Services.AddTransient<LoginPage>();
             //builder.Services.AddTransient<LoginPage>();
 
 

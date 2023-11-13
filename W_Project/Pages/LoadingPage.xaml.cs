@@ -24,13 +24,13 @@ public partial class LoadingPage : ContentPage
 		{
 			//User is loggin in
 			// 
-			await Shell.Current.GoToAsync($"{nameof(MainPage)}");
+			//await Shell.Current.GoToAsync($"{nameof(MainPage)}");
 		}
 
 		else
 		{
 			//USer is not logge in 
-			await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
+			//await Shell.Current.GoToAsync($"{nameof(LoginPage)}")
 		}
 	}
 

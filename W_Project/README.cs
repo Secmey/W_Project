@@ -7,3 +7,4 @@
 // 4. Möglichst nur wenn nötig Events benutzen, bitte MVVM benutzen. Model -> Viewmodel -> View
 
 // 5. Clean Code scheiß egal, solange man es gut lesen kann
+
