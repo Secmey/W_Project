@@ -5,12 +5,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:W_Project"
     xmlns:Pages="clr-namespace:W_Project.Pages"
+    x:DataType="local:AppShell"
     Shell.FlyoutBehavior="Flyout">
 
     <ShellContent
     Title="Home"
     ContentTemplate="{DataTemplate local:MainPage}"
-    Route="MainPage"/>
+    Route="MainPage"
+        FlyoutItem.IsVisible="True"/>
     <ShellContent
         Title="LoginPage"
         ContentTemplate="{DataTemplate Pages:LoginPage}"

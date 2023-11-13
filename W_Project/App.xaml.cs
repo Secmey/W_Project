@@ -1,4 +1,6 @@
-﻿namespace W_Project
+﻿using W_Project.Pages;
+
+namespace W_Project
 {
     public partial class App : Application
     {
@@ -6,7 +8,9 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+
+            // Open the Login Page when App starting
+            MainPage = new NavigationPage(new LoginPage());
         }
     }
 }
