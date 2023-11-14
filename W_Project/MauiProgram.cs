@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using W_Project.CustomControls;
 using W_Project.Pages;
 using W_Project.Services;
 
@@ -21,19 +22,11 @@ namespace W_Project
 		builder.Logging.AddDebug();
 #endif
 
-            // AddTransient wird verwendet, um Services mit der konkreten Implementierung ein Service zu registrieren.
-            // Mit AddTransient wird jedes Mal, wenn ein Service benötigt wird, eine neue Instanz vom Service erstellt.
-            // Dies ist ideal für leichte, zustandslose Dienste.
-            builder.Services.AddTransient<IsAuthenticated>();
-            builder.Services.AddTransient<LoadingPage>();
-            builder.Services.AddTransient<ListingPage>();
-            builder.Services.AddTransient<Contents>();
-            builder.Services.AddTransient<LoginPage>();
-            //builder.Services.AddTransient<LoginPage>();
-
+            
 
 
             return builder.Build();
         }
     }
 }
+

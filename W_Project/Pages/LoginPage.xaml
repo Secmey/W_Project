@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:UserLogin="clr-namespace:W_Project.UserLogin"
+             xmlns:CustomControls="clr-namespace:W_Project.CustomControls"
              x:Class="W_Project.Pages.LoginPage"
              Title="LoginPage">
 
@@ -9,14 +10,56 @@
         <UserLogin:UserLoginViewModel/>
     </ContentPage.BindingContext>
 
-    <StackLayout >
-        <Entry Placeholder="UserName" PlaceholderColor="Black"
-               Text="{Binding UserName}"/>
-        <Entry Placeholder="Passwort"
-               IsPassword="True"
-               Text="{Binding Password}"/>
-        <Button 
-            Text="Login"
-            Command="{Binding LoginCommand}"/>
-    </StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="uvlplant.jpg"
+               Aspect="Fill"
+               Grid.Row="0" Grid.RowSpan="6"
+               Grid.Column="0" 
+               Grid.ColumnSpan="3"/>
+            
+        <!-- Login Button -->
+        <Button Text="Login"
+                TextColor="Black"
+                FontFamily="Poppins"
+                FontAttributes="Bold"
+                FontSize="Body"
+                Command="{Binding LoginCommand}"
+                Grid.Row="5" 
+                Grid.Column="1"
+                HeightRequest="50"
+                WidthRequest="350"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="#FBFFFC"
+                VerticalOptions="Center" 
+                Margin="0, -100, 0, 0" 
+                CornerRadius="15" 
+                Opacity="0.7"/>
+                
+        <Button Text="Create an Account"
+                TextColor="White"
+                FontFamily="Poppins"
+                FontAttributes="Bold"
+                FontSize="Body"
+                Grid.Row="6"
+                Grid.Column="1"
+                HeightRequest="50"
+                WidthRequest="350"
+                HorizontalOptions="FillAndExpand"
+                Background="Transparent"
+                BorderColor="Transparent"/>
+
+    </Grid>
 </ContentPage>
