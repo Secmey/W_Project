@@ -10,7 +10,7 @@
         <UserLogin:UserLoginViewModel/>
     </ContentPage.BindingContext>
 
-    <Grid>
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
@@ -29,7 +29,13 @@
                Grid.Row="0" Grid.RowSpan="6"
                Grid.Column="0" 
                Grid.ColumnSpan="3"/>
-            
+
+        <Image Source="bild2.jpg"
+               Aspect="AspectFit"
+               HorizontalOptions="Start"
+               VerticalOptions="Start"
+               Margin="10" Background="White"/>
+
         <!-- Login Button -->
         <Button Text="Login"
                 TextColor="Black"
@@ -47,12 +53,13 @@
                 Margin="0, -100, 0, 0" 
                 CornerRadius="15" 
                 Opacity="0.7"/>
-                
+
         <Button Text="Create an Account"
                 TextColor="White"
                 FontFamily="Poppins"
                 FontAttributes="Bold"
                 FontSize="Body"
+                Command="{Binding RegisterCommand}"
                 Grid.Row="6"
                 Grid.Column="1"
                 HeightRequest="50"
