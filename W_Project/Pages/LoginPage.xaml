@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:UserLogin="clr-namespace:W_Project.UserLogin"
              xmlns:CustomControls="clr-namespace:W_Project.CustomControls"
+             xmlns:Skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
              x:Class="W_Project.Pages.LoginPage"
              Title="LoginPage">
 
@@ -10,63 +11,104 @@
         <UserLogin:UserLoginViewModel/>
     </ContentPage.BindingContext>
 
-    <Grid >
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
+            <!--1-->
             <RowDefinition Height="Auto"/>
+            <!--2-->
+            <RowDefinition Height="100"/>
+            <!--3-->
             <RowDefinition Height="Auto"/>
+            <!--4-->
             <RowDefinition Height="Auto"/>
+            <!--5-->
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
+            <!--1-->
             <ColumnDefinition Width="Auto"/>
+            <!--2-->
             <ColumnDefinition Width="*"/>
+            <!--3-->
+
+            <!--Background-->
         </Grid.ColumnDefinitions>
-        <Image Source="uvlplant.jpg"
+
+        <Image Source="uvlplant"
                Aspect="Fill"
-               Grid.Row="0" Grid.RowSpan="6"
+               Grid.Row="0" Grid.RowSpan="7"
                Grid.Column="0" 
                Grid.ColumnSpan="3"/>
 
-        <Image Source="bild2.jpg"
-               Aspect="AspectFit"
-               HorizontalOptions="Start"
-               VerticalOptions="Start"
-               Margin="10" Background="White"/>
+        <Image Source="a"
+               Grid.Row="1"   
+               Grid.RowSpan="3"
+               Grid.Column="1"
+               />
 
-        <!-- Login Button -->
-        <Button Text="Login"
-                TextColor="Black"
+            <Label Text="Discover 
+                     Cannabis
+                     debunk myths
+                     enjoy Life."
+               FontFamily="Poppins"
+               FontAttributes="Bold"
+               FontSize="39"
+               Grid.Row="0"
+               Grid.RowSpan="3"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               TextColor="White"
+               Margin="30, 70, 30, 30"/>
+
+            <!--LottLoadSymbol-->
+            <Skia:SKLottieView x:Name="lottieview"
+                           Source="car.json"
+                           VerticalOptions="Center" 
+                           HorizontalOptions="Center" 
+                           RepeatCount="-1" 
+                           RepeatMode="Restart" 
+                           Grid.Row="5" 
+                           Grid.RowSpan="4"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           WidthRequest="100" 
+                           Margin="-200, 100, 30, 100"/>
+
+            <!-- Login Button -->
+            <Button x:Name="loginbutton"
+                    Text="Login"
+                    TextColor="Black"
+                    FontFamily="Poppins"
+                    FontAttributes="Bold"
+                    FontSize="Body"
+                    Command="{Binding LoginCommand}"
+                    Grid.Row="6" 
+                    Grid.Column="1"
+                    HeightRequest="50"
+                    WidthRequest="350"
+                    HorizontalOptions="End"
+                    BackgroundColor="#FBFFFC"
+                    VerticalOptions="End" 
+                    CornerRadius="15" 
+                    Opacity="1"
+                    Clicked="Button_Clicked"
+                    Margin="0, 150"/>
+
+            <!-- Button zum Erstellen eines Kontos -->
+            <Button Text="Create an Account"
                 FontFamily="Poppins"
                 FontAttributes="Bold"
                 FontSize="Body"
-                Command="{Binding LoginCommand}"
-                Grid.Row="5" 
-                Grid.Column="1"
-                HeightRequest="50"
-                WidthRequest="350"
-                HorizontalOptions="FillAndExpand"
-                BackgroundColor="#FBFFFC"
-                VerticalOptions="Center" 
-                Margin="0, -100, 0, 0" 
-                CornerRadius="15" 
-                Opacity="0.7"/>
-
-        <Button Text="Create an Account"
-                TextColor="White"
-                FontFamily="Poppins"
-                FontAttributes="Bold"
-                FontSize="Body"
-                Command="{Binding RegisterCommand}"
-                Grid.Row="6"
+                Grid.Row="7" 
                 Grid.Column="1"
                 HeightRequest="50"
                 WidthRequest="350"
                 HorizontalOptions="FillAndExpand"
                 Background="Transparent"
-                BorderColor="Transparent"/>
-
+                BorderColor="Transparent"
+                Margin="0, -30, 0, 0"/>
     </Grid>
 </ContentPage>

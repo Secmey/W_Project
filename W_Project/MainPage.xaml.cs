@@ -19,6 +19,15 @@
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+
+        }
+        // Lädt die Methode OnAppearing und überschreibt diese mit SetHasBackButton
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            NavigationPage.SetHasBackButton(this, false);
+
         }
     }
 }

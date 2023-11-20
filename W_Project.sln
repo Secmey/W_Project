@@ -14,15 +14,23 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM64 = Debug|ARM64
 		Release|Any CPU = Release|Any CPU
+		Release|ARM64 = Release|ARM64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{53A81BDC-AC9A-4F33-9CA6-41F26CAB238F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{53A81BDC-AC9A-4F33-9CA6-41F26CAB238F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53A81BDC-AC9A-4F33-9CA6-41F26CAB238F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{53A81BDC-AC9A-4F33-9CA6-41F26CAB238F}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{53A81BDC-AC9A-4F33-9CA6-41F26CAB238F}.Debug|ARM64.Build.0 = Debug|ARM64
+		{53A81BDC-AC9A-4F33-9CA6-41F26CAB238F}.Debug|ARM64.Deploy.0 = Debug|ARM64
 		{53A81BDC-AC9A-4F33-9CA6-41F26CAB238F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53A81BDC-AC9A-4F33-9CA6-41F26CAB238F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{53A81BDC-AC9A-4F33-9CA6-41F26CAB238F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{53A81BDC-AC9A-4F33-9CA6-41F26CAB238F}.Release|ARM64.ActiveCfg = Release|ARM64
+		{53A81BDC-AC9A-4F33-9CA6-41F26CAB238F}.Release|ARM64.Build.0 = Release|ARM64
+		{53A81BDC-AC9A-4F33-9CA6-41F26CAB238F}.Release|ARM64.Deploy.0 = Release|ARM64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

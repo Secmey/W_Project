@@ -3,6 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="W_Project.MainPage">
 
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsEnabled="False" IsVisible="false"/>
+    </Shell.BackButtonBehavior>
+
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"

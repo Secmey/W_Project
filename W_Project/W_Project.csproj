@@ -28,6 +28,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<Platforms>AnyCPU;ARM64</Platforms>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -49,7 +50,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\BackCover.jpg" />
+	  <MauiImage Remove="Resources\Images\Cannapedia.svg" />
+	  <MauiImage Remove="Resources\Images\Leaf.png" />
 	  <MauiImage Remove="Resources\Images\uvlplant.jpg" />
+	  <MauiImage Remove="Resources\Images\WeedMan.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -58,18 +63,33 @@
 	  <None Remove="Resources\Fonts\Poppins-Medium.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-Regular.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-SemiBold.ttf" />
-	  <None Remove="Resources\Images\bild2.png" />
+	  <None Remove="Resources\Images\ani_mation.json" />
+	  <None Remove="Resources\Images\BackCover.jpg" />
+	  <None Remove="Resources\Images\Cannapedia.svg" />
+	  <None Remove="Resources\Images\Leaf.png" />
 	  <None Remove="Resources\Images\uvlplant.jpg" />
-	  <None Remove="Resources\Images\weed.svg" />
+	  <None Remove="Resources\Images\WeedMan.png" />
+	  <None Remove="Resources\Images\weed_man.svg" />
+	  <None Remove="Resources\Raw\alienjson.json" />
+	  <None Remove="Resources\Raw\car.json" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Include="Resources\Raw\ani_mation.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Resources\Images\Cannapedia.svg" />
+	  <Resource Include="Resources\Images\Leaf.png" />
 	  <Resource Include="Resources\Images\uvlplant.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Microsoft.VisualStudio.Utilities" Version="17.7.37355" />
+		<PackageReference Include="SkiaSharp.Extended" Version="2.0.0-preview.86" />
+		<PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.86" />
+		<PackageReference Include="System.Security.Permissions" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -93,4 +113,15 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
+	  <PackageReference Include="Com.Airbnb.Android.Lottie">
+	    <Version>4.2.2</Version>
+	  </PackageReference>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-maccatalyst'">
+	  <PackageReference Include="Com.Airbnb.iOS.Lottie">
+	    <Version>2.5.13</Version>
+	  </PackageReference>
+	</ItemGroup>
 </Project>

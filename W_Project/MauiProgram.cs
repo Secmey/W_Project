@@ -2,6 +2,8 @@
 using W_Project.CustomControls;
 using W_Project.Pages;
 using W_Project.Services;
+using SkiaSharp.Extended.UI.Controls;
+using SkiaSharp.Views.Maui.Controls.Hosting;
 
 namespace W_Project
 {
@@ -12,6 +14,8 @@ namespace W_Project
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseSkiaSharp()
+                
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
